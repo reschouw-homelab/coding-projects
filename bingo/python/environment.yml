@@ -3,4 +3,5 @@ channels:
   - defaults
 dependencies:
   - python=3.10.8
+  - pytest=7.1.2
 prefix: ~/opt/miniconda3/envs/bingo
