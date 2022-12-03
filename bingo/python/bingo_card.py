@@ -7,6 +7,7 @@ class card:
         """
         Creates an empty bingo card
         """
+
         # The numbers on the card
         self.numbers = {
             "b" : sample(range(1 , 16), 5),
@@ -76,3 +77,8 @@ class card:
             row = self.numbers[column].index(number)
             self.mark(column, row)
 
+    def has_won(self):
+        """
+        Checks to see if the card has a winning arrangement of marks
+        """
+        # Check Columns
