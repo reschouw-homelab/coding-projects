@@ -123,9 +123,9 @@ def test_won_diagonal():
         card.mark(bingo[index], index)
     assert(card.has_won())
 
-    #Upper Left to Lower Right
+    #Lower Left to Upper Right
     card = bingo_card.card()
-    bingo = bingo.reverse()
+    bingo.reverse()
     assert(not card.has_won())
     for index in range(5):
         card.mark(bingo[index], index)
