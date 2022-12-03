@@ -8,6 +8,7 @@ def test_create_card():
 # Print a bingo Card
 def test_print_card():
     card = bingo_card.card()
+    assert(type(str(card)) == type("I am a string"))
     print(card)
 
 # Get the value of a square on the card, and make sure the free square exists
