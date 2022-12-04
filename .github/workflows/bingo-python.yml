@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'bingo/python/*'
+      - '.github/workflows/bingo-python.yml'
 
 jobs:
   Unit_Tests:
