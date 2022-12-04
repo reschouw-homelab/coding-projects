@@ -1,0 +1,26 @@
+name: Bingo Python Tests
+run-name: ${{ github.actor }} is Running Bingo Python Unit tests!
+on:
+  push:
+    paths:
+      - 'bingo/python/*'
+
+jobs:
+  Unit Tests:
+
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      
+
+        
+      
