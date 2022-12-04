@@ -10,5 +10,5 @@ Each project is located at the root of the repo, with each the files for each pr
 The framework of Conway's game of life, in both Python and Go!
  
 ### bingo
-The ubiquitous game of bingo, in Python!
+The ubiquitous game of bingo, in Python! Eventually in Go!
 ![bingo-python](https://github.com/reschouw-homelab/coding-projects/actions/workflows/bingo-python.yml/badge.svg)
