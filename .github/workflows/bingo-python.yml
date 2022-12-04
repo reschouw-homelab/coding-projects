@@ -28,7 +28,3 @@ jobs:
       - name: Run tests
         run: |
           pytest bingo/python
-
-
-        
-      
