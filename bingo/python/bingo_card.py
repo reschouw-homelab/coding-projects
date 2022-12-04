@@ -75,4 +75,4 @@ class card:
         if number in self.numbers[column]:
             row = self.numbers[column].index(number)
             self.mark(column, row)
-#test comment
+#test comments

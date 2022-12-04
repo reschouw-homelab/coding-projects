@@ -6,7 +6,7 @@ on:
       - 'bingo/python/*'
 
 jobs:
-  Unit Tests:
+  Unit_Tests:
 
     strategy:
       matrix:
