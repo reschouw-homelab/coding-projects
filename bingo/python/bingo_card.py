@@ -119,4 +119,3 @@ class card:
         
         # No winning patterns
         return False
-
