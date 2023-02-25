@@ -64,3 +64,69 @@ def test_number_called():
     assert(not card.is_marked("b", 3))
     card.call("b", square_number)
     assert(card.is_marked("b", 3))
+
+# Check if a card has a winning column of marks
+def test_won_column():
+    card = bingo_card.card()
+    assert(not card.has_won())
+    for row in range(5):
+        card.mark("b", row)
+    assert(card.has_won)
+
+    card = bingo_card.card()
+    assert(not card.has_won())
+    for row in range(5):
+        card.mark("o", row)
+    assert(card.has_won)
+
+    # Check special case of using "Free"
+    card = bingo_card.card()
+    assert(not card.has_won())
+    for row in range(5):
+        if row == 2:
+            continue
+        card.mark("o", row)
+    assert(card.has_won)
+
+# Check if a card has a winning row of marks
+def test_won_row():
+    bingo = ["b", "i", "n", "g", "o"]
+
+    card = bingo_card.card()
+    assert(not card.has_won())
+    for column in bingo:
+        card.mark(column, 0)
+    assert(card.has_won())
+
+    card = bingo_card.card()
+    assert(not card.has_won())
+    for column in bingo:
+        card.mark(column, 4)
+    assert(card.has_won())
+
+    card = bingo_card.card()
+    assert(not card.has_won())
+    for column in bingo:
+        if column == "n":
+            continue
+        card.mark(column, 2)
+    assert(card.has_won())
+    
+# Check if a card has a winning diagonal of marks
+def test_won_diagonal():
+    bingo = ["b", "i", "n", "g", "o"]
+
+    #Upper Left to Lower Right
+    card = bingo_card.card()
+    assert(not card.has_won())
+    for index in range(5):
+        card.mark(bingo[index], index)
+    assert(card.has_won())
+
+    #Lower Left to Upper Right
+    card = bingo_card.card()
+    bingo.reverse()
+    assert(not card.has_won())
+    for index in range(5):
+        card.mark(bingo[index], index)
+    assert(card.has_won())
